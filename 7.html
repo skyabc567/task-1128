@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var arr5 = [4, [5, 6, [3, 5, [2, 5]]], [7, 8], [9, 10]];
+    var result = [];
+    for(var m = 0; m < arr5.length; m++) {
+        var item = arr5[m];
+        if(typeof item == 'number') {
+            result.push(item);
+        } else {
+            for(var n = 0; n < item.length; n++) {
+                arr5.push(item[n]);
+            }
+        }
+    }
+console.log(result);
+</script>
+</html>
